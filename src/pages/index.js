@@ -41,8 +41,8 @@ const Home = () => {
                         </Link>
                     </li>
                     <li className="home__menu-item">
-                        <Link className="home__menu-link" to="/swapface">
-                            Face Swaping
+                        <Link className="home__menu-link" to="/detect">
+                            Detection
                         </Link>
                     </li>
                 </ul>

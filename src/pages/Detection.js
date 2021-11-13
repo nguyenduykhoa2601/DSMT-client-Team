@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos'
 
-import File from '../components/Global/File'
+import Detect from '../components/Global/Detect'
 
 import "aos/dist/aos.css"
 
@@ -37,7 +37,7 @@ const FaceSwap = () => {
                     </li>
                     <li className="home__menu-item">
                         <Link className="home__menu-link" to="/swapface">
-                            Face Swaping
+                            Detection
                         </Link>
                     </li>
                 </ul>
@@ -50,7 +50,7 @@ const FaceSwap = () => {
             <div className="face__page-title" data-aos="flip-left">
                 Welcome to Face Swapping, let's try this function
             </div>
-            <File />
+            <Detect />
 
         </div>
     );
