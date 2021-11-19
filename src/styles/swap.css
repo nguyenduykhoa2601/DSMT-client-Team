@@ -1,0 +1,100 @@
+.face__swap{
+    max-width: 1140px;
+    margin: auto;
+    padding-bottom: 300px;
+}
+
+.face__page-title {
+    margin-top: 90px;
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(54, 94, 72);
+}
+
+.files__action{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.file__input-first,
+.file__input-second{
+    flex: 1;
+    border: 1px solid orange;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    height: 400px;
+    outline: none;
+}
+
+.file__input-first::before,
+.file__input-second::before{
+    content: "+";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0 ;
+    padding-top: 18%;
+    left: 0;
+    background: white;
+    color: orange;
+    font-size: 17rem;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+}
+
+
+.file__image-first,
+.file__image-second,
+.file__input-result{
+    flex: 1;
+    max-width: 50%;
+    height: 100%;
+    height: 400px;
+    display: block;
+    outline: none;
+    object-fit: contain;
+}
+
+.file__input-result{
+    display: flex;
+    margin: auto;
+    padding-top: 20px;
+}
+
+
+.file__title_swapped{
+    text-align: center;
+    margin-top: 90px;
+    font-size: 2rem
+}
+.file__image-first,
+.file__input-first{
+    margin-right: 10px;
+}
+
+.file__image-second,
+.file__input-second{
+    margin-left: 10px;
+}
+
+.files__upload{
+    display: flex;
+    margin: auto;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--background-button);
+    color: var(--text-button);
+    font-size: 1.6rem;
+}
+
+.files__upload:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}

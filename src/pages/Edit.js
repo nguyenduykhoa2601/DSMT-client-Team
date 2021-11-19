@@ -40,6 +40,11 @@ const Edit = () => {
                             Detection
                         </Link>
                     </li>
+                    <li className="home__menu-item">
+                        <Link className="home__menu-link" to="/swap">
+                            Swap Face
+                        </Link>
+                    </li>
                 </ul>
                 <button className="home__menu-started">
                     <Link to="/edit">

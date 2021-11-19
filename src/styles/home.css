@@ -36,9 +36,10 @@
 .home__menu-item:nth-child(2) {
     margin-left: 20px;
     margin-right: 20px;
-    ;
 }
-
+.home__menu-item:last-child{
+    margin-left: 20px;
+}
 .home__menu-link {
     text-decoration: none;
     color: #1d1b2f;

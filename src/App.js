@@ -5,6 +5,7 @@ import Edit from "./pages/Edit";
 import Detection from "./pages/Detection";
 import NotFound from "./pages/NotFound"
 import Home from "./pages/index";
+import Swap from "./pages/Swap";
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
                     <Route path="/" exact component={Home} />
                     <Route path="/edit" exact component={Edit}/>
                     <Route path="/detect" exact component={Detection} />
+                    <Route path="/swap" exact component={Swap} />
                     <Route path="*" exact component={NotFound} />
                 </Switch>
             </div>
