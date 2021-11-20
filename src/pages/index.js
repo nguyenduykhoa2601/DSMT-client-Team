@@ -220,13 +220,13 @@ const Home = () => {
                 <li className="home__info-item" data-aos="flip-up">
                     <img
                         className="home__info-item-img"
-                        src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        src="https://i.ytimg.com/vi/hMFx1TXjAJc/maxresdefault.jpg"
                         alt=""
                     />
                     <div className="home__info-detail">
                         <div className="home__info-title">Detection</div>
                         <div className="home__info-main">
-                            For the dection page, we use TF to predict 
+                            For the dection page, we use TF to predict some objects in a picture. We applied some libraries which is supported by tensorflow. Otherwise, we also refer some newspaper to build model for this function
                         </div>
                     </div>
                 </li>
