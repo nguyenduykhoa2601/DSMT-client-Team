@@ -26,7 +26,7 @@ _ Use command: `npm start` to run client
 
 ### Link demo client without server
 
-https://jolly-kepler-773c86.netlify.app/
+https://befunky-with-uit-app.netlify.app/
 
 ### About My teams
 
