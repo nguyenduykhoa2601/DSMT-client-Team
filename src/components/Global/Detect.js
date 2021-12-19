@@ -18,7 +18,7 @@ const Detect = () => {
     const [arrGame, setArrGame] = useState([])
     const [isHide, setIsHide] = useState(false)
     const [kindeLevel, setKindLevel] = useState(1)
-    const [stringGame,setStringGame] = useState('person,person,bicycle,person,mouse,car,mouse,car,car')
+    const [stringGame, setStringGame] = useState('person,person,bicycle,person,mouse,car,mouse,car,car')
 
     useEffect(() => {
         AOS.init({ duration: 500 })
@@ -57,7 +57,7 @@ const Detect = () => {
             setLoading(true)
             const res = await axios.post(`${process.env.REACT_APP_API}/upload`, formData)
             await setImagePrediction(res.data)
-            await setStringGame('') //// NOI DO API tra ve string
+            await setStringGame() //// NOI DO API tra ve string
             let t1 = performance.now();
             setPerform(t1 - t0)
             setLoading(false)
@@ -113,10 +113,12 @@ const Detect = () => {
                         }
                     </div>
                 </div>
-                <div className="detect__result-checkbox">
-                    <div className="checkbox-text">{!isHide ? 'Show result' : 'Hide result'} </div>
-                    <input type="checkbox" className="checkbox-input" onClick={() => setIsHide(!isHide)} />
-                </div>
+                {
+                    imagePrediction && <div className="detect__result-checkbox">
+                        <div className="checkbox-text">{!isHide ? 'Show result' : 'Hide result'} </div>
+                        <input type="checkbox" className="checkbox-input" onClick={() => setIsHide(!isHide)} />
+                    </div>
+                }
                 <div className="detection__info">
                     {
                         imagePrediction && <div className="detection__total-time">Timing to get result: <span>{Intl.NumberFormat().format(perform)}</span> seconds</div>
@@ -140,13 +142,13 @@ const Detect = () => {
                         <div className="detection__your-predict" data-aos="fade-down">
                             <div className="form__action">
                                 {
-                                    kindeLevel === 2 && <Level2 arrGame={arrGame} previewImageUrl= {previewImageUrl}/>
+                                    kindeLevel === 2 && <Level2 arrGame={arrGame} previewImageUrl={previewImageUrl} />
                                 }
                                 {
-                                    kindeLevel === 1 && <Level1 arrGame={arrGame}  />
+                                    kindeLevel === 1 && <Level1 arrGame={arrGame} />
                                 }
                                 {
-                                    kindeLevel === 3 && <Level3 arrGame={arrGame} previewImageUrl= {previewImageUrl} />
+                                    kindeLevel === 3 && <Level3 arrGame={arrGame} previewImageUrl={previewImageUrl} />
                                 }
                             </div>
                         </div>
