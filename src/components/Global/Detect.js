@@ -18,9 +18,7 @@ const Detect = () => {
     const [arrGame, setArrGame] = useState([])
     const [isHide, setIsHide] = useState(false)
     const [kindeLevel, setKindLevel] = useState(1)
-    const [result, setResult] = useState(0)
-    const [stringGame,setStringGame] = useState('')
-
+    const [stringGame,setStringGame] = useState('person,person,bicycle,person,mouse,car,mouse,car,car')
 
     useEffect(() => {
         AOS.init({ duration: 500 })
@@ -84,12 +82,6 @@ const Detect = () => {
         a.click();
     }
 
-    const getResult = (point) => {
-        setResult(point)
-    }
-
-    console.log("point", result)
-
     return (
         <div className="detection">
             <div className="detection__upload">
@@ -137,7 +129,7 @@ const Detect = () => {
                     }
                 </div>
                 {
-                    imagePrediction && isHide &&
+                    !imagePrediction &&
                     <>
                         <div className="detection__your-predict-title">Our model can detect {arrGame.length} objects. Can you guess it?</div>
                         <ul className="menu_game">
@@ -148,13 +140,13 @@ const Detect = () => {
                         <div className="detection__your-predict">
                             <div className="form__action">
                                 {
-                                    kindeLevel === 2 && <Level2 arrGame={arrGame} />
+                                    kindeLevel === 2 && <Level2 arrGame={arrGame} previewImageUrl= {previewImageUrl}/>
                                 }
                                 {
-                                    kindeLevel === 1 && <Level1 arrGame={arrGame} getResult={getResult} />
+                                    kindeLevel === 1 && <Level1 arrGame={arrGame}  />
                                 }
                                 {
-                                    kindeLevel === 3 && <Level3 arrGame={arrGame} />
+                                    kindeLevel === 3 && <Level3 arrGame={arrGame} previewImageUrl= {previewImageUrl} />
                                 }
                             </div>
                         </div>

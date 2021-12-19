@@ -18,13 +18,10 @@ const Level2 = (props) => {
         })
     }
 
-    const showPoint = async (e) => {
-        e.preventDefault()
-        props.getResult(point)
-    }
 
     return (
-        <form onSubmit={e => showPoint(e)}>
+        <form className="form__level">
+            <div>
             {
                 arrGame.map((game, index) => {
                     return (
@@ -67,6 +64,8 @@ const Level2 = (props) => {
                     )
                 })
             }
+            </div>
+            <img className="img__game" alt="" src={props?.previewImageUrl} />
         </form>
     )
 }

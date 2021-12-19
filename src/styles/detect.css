@@ -131,6 +131,7 @@
     text-align: center;
     font-weight: 700;
     color: rgb(5, 95, 65);
+    margin-top: 25px;
 }
 
 .menu_game{
@@ -235,4 +236,11 @@ label{
     font-size: 1.6rem;
     margin-top: 10px;
     text-align: center;
+}
+.form__level{
+    display: flex;
+    justify-content: space-between;
+}
+.img__game{
+    width: 50%;
 }

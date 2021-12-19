@@ -18,55 +18,53 @@ const Level3 = (props) => {
         })
     }
 
-    const showPoint =  (e) => {
-        e.preventDefault()
-        props.getResult(point)
-    }
-
     return (
-        <form onSubmit={e => showPoint(e)}>
-            {
-                arrGame.map((game, index) => {
-                    return (
-                        <div className="keyword" key={index}>
-                            {
-                                getLetterfromString(game).map((letter, index) => {
-                                    return (
-                                        <span className="keyword__letter" key={index}>
-                                            {
-                                                index === 1 ?
-                                                    letter
-                                                    :
-                                                    <input
-                                                        className="input-letters"
-                                                        disabled={true}
-                                                        type="text"
-                                                    />
-                                            }
-                                            &nbsp;
-                                        </span>
-                                    )
-                                })
-                            }
-                            <br />
-                            <input
-                                type="text"
-                                className="your-guess"
-                                placeholder="Type your guess here"
-                                required={true}
-                                onChange={(e) => handleChangeInput(e, game, index)}
-                                disabled={arrSuccess.includes(index)}
-                                maxLength={game.length}
-                            />
+        <form className="form__level">
+            <div>
+                {
+                    arrGame.map((game, index) => {
+                        return (
+                            <div className="keyword" key={index}>
+                                {
+                                    getLetterfromString(game).map((letter, index) => {
+                                        return (
+                                            <span className="keyword__letter" key={index}>
+                                                {
+                                                    index === 1 ?
+                                                        letter
+                                                        :
+                                                        <input
+                                                            className="input-letters"
+                                                            disabled={true}
+                                                            type="text"
+                                                        />
+                                                }
+                                                &nbsp;
+                                            </span>
+                                        )
+                                    })
+                                }
+                                <br />
+                                <input
+                                    type="text"
+                                    className="your-guess"
+                                    placeholder="Type your guess here"
+                                    required={true}
+                                    onChange={(e) => handleChangeInput(e, game, index)}
+                                    disabled={arrSuccess.includes(index)}
+                                    maxLength={game.length}
+                                />
 
-                            {
-                                arrSuccess.includes(index) && <i className="fas fa-check"></i>
-                            }
+                                {
+                                    arrSuccess.includes(index) && <i className="fas fa-check"></i>
+                                }
 
-                        </div>
-                    )
-                })
-            }
+                            </div>
+                        )
+                    })
+                }
+            </div>
+            <img className="img__game" alt="" src={props?.previewImageUrl} />
         </form>
     )
 }
