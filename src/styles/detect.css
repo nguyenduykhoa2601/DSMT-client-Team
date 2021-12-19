@@ -107,3 +107,132 @@
     opacity: 0.7;
     cursor: pointer;
 }
+
+.detect__result-checkbox{
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: row-reverse;
+    color: rgb(92, 161, 221);
+    text-align: center;
+    align-items: center;
+}
+
+.checkbox-text{
+    margin-left: 5px;
+}
+
+.checkbox-input{
+    width: 15px;
+    height: 15px;
+}
+
+.detection__your-predict-title{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(5, 95, 65);
+}
+
+.menu_game{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 20px;
+}
+.menu__game-item ,
+.menu__game-item--active{
+    margin-left: 40px;
+    font-size: 1.6rem;
+}
+
+.menu__game-item:hover ,
+.menu__game-item--active:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.menu__game-item--active{
+    color: orangered;
+}
+.detection__your-predict{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.keyword{
+    margin-top: 30px;
+}
+
+.keyword__letter{
+    font-size: 1.8rem;
+}
+
+.input-letters{
+    width: 25px;
+    height: 25px;
+    font-size: 1.6rem;
+    text-align: center;
+    align-items: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.input-letters:focus{
+    outline: none;
+}
+
+.submit__form{
+    margin-top: 30px;
+    font-size: 1.6rem;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 10px;
+    margin-left: 45%;
+    cursor: pointer;
+    text-align: center;
+    background-color: greenyellow;
+    color: rgb(58, 54, 54);
+}
+
+.form__action{
+    width: 100%;
+}
+
+.submit__form:hover{
+    opacity: 0.8;
+}
+
+.your-guess{
+    margin-top: 20px;
+    padding: 5px 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 1.6rem;
+}
+
+.your-guess:focus{
+    outline: none;
+}
+
+.fas.fa-check{
+    color : green;
+    transform: scale(1.5);
+}
+
+.option__level1{
+    margin-left: 12px !important;
+}
+label{
+    font-size: 1.6rem;
+}
+
+.text__result{
+    font-size: 1.6rem;
+    margin-top: 10px;
+    text-align: center;
+}
