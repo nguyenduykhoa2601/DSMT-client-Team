@@ -1,10 +1,17 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import { Test, QuestionGroup, Question, Option } from 'react-multiple-choice';
 import { randomString } from '../../utils/function';
+import AOS from 'aos'
+
+import "aos/dist/aos.css"
 
 var sentenceSuccess = []
 const Level1 = ({ arrGame }) => {
     const [showLabel,setShowLabel] = useState(false)
+    
+    useEffect(() => {
+        AOS.init({ duration: 300 })
+    }, [])
 
     const onCheckResult = (selectedOptions, index) => {
         const checkOption = selectedOptions[undefined]
@@ -24,7 +31,7 @@ const Level1 = ({ arrGame }) => {
     }
 
     return (
-        <>
+        <div data-aos="fade-left">
             {
                 !showLabel && arrGame.map((game, index) => {
                     return (
@@ -54,7 +61,7 @@ const Level1 = ({ arrGame }) => {
             <br />
             {showLabel && <div className="text__result">Your answer was correct : {sentenceSuccess.length}</div>}
             <button className="submit__form" onClick={showResult}>Show result</button>
-        </>
+        </div>
     )
 }
 

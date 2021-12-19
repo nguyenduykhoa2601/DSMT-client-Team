@@ -1,11 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { getLetterfromString } from '../../utils/function'
+import AOS from 'aos'
 
+import "aos/dist/aos.css"
 
 const Level3 = (props) => {
     const { arrGame } = props
     const [point, setPoint] = useState(0)
     const [arrSuccess, setArrSuccess] = useState([])
+
+    useEffect(() => {
+        AOS.init({ duration: 300 })
+    }, [])
 
     const handleChangeInput = (e, game, index) => {
         arrGame.forEach((value) => {
@@ -19,7 +25,7 @@ const Level3 = (props) => {
     }
 
     return (
-        <form className="form__level">
+        <form className="form__level" data-aos="fade-right">
             <div>
                 {
                     arrGame.map((game, index) => {
@@ -54,11 +60,9 @@ const Level3 = (props) => {
                                     disabled={arrSuccess.includes(index)}
                                     maxLength={game.length}
                                 />
-
                                 {
                                     arrSuccess.includes(index) && <i className="fas fa-check"></i>
                                 }
-
                             </div>
                         )
                     })

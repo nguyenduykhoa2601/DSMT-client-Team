@@ -129,15 +129,15 @@ const Detect = () => {
                     }
                 </div>
                 {
-                    !imagePrediction &&
+                    imagePrediction &&
                     <>
-                        <div className="detection__your-predict-title">Our model can detect {arrGame.length} objects. Can you guess it?</div>
-                        <ul className="menu_game">
+                        <div className="detection__your-predict-title" data-aos="fade-down">Our model can detect {arrGame.length} objects. Can you guess it?</div>
+                        <ul className="menu_game" data-aos="fade-down">
                             <li className={kindeLevel === 1 ? "menu__game-item--active" : "menu__game-item"} onClick={() => setKindLevel(1)}>Level 1</li>
                             <li className={kindeLevel === 2 ? "menu__game-item--active" : "menu__game-item"} onClick={() => setKindLevel(2)}>Level 2</li>
                             <li className={kindeLevel === 3 ? "menu__game-item--active" : "menu__game-item"} onClick={() => setKindLevel(3)}>Level 3</li>
                         </ul>
-                        <div className="detection__your-predict">
+                        <div className="detection__your-predict" data-aos="fade-down">
                             <div className="form__action">
                                 {
                                     kindeLevel === 2 && <Level2 arrGame={arrGame} previewImageUrl= {previewImageUrl}/>
